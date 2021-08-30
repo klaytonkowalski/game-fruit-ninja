@@ -188,6 +188,7 @@ static void Initialize()
     donutTexture = LoadTexture("Donut.png");
     InitAudioDevice();
     music = LoadMusicStream("Music.wav");
+    PlayMusicStream(music);
     fruitSlashSound = LoadSound("FruitSlash.wav");
     fruitSpawnSound = LoadSound("FruitSpawn.wav");
     donutSlashSound = LoadSound("DonutSlash.wav");
@@ -211,6 +212,11 @@ static void Initialize()
 
 static void Update()
 {
+    UpdateMusicStream(music);
+    if (IsKeyPressed(KEY_M))
+    {
+        IsMusicPlaying(music) ? PauseMusicStream(music) : ResumeMusicStream(music);
+    }
     if (state == startState)
     {
         UpdateStartState();
