@@ -1,5 +1,5 @@
 # Fruit Ninja
-Fruit Ninja clone made with Raylib.
+Fruit Ninja game made with Raylib.
 
 Please click the "Star" button on GitHub if you find this project to be interesting!
 
